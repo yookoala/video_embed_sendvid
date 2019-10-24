@@ -138,6 +138,7 @@ Build:
     # Ensure we have Phpunit for next tests.
     - robo install:phpunit
     # Add here any custom build step, composer run-script, grunt, webpack, yarn...
+    - composer require 'drupal/video_embed_field:^2.2'
   variables:
     <<: *test_variables
   # [CI_TYPE] When using included Drupal for a module or a theme, the
