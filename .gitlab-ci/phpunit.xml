@@ -60,6 +60,10 @@
       <exclude>
         <directory suffix="Test.php">./</directory>
         <directory suffix="TestBase.php">./</directory>
+        <directory suffix="RoboFile.php">../*</directory>
+        <directory suffix="RoboFile.php">../**</directory>
+        <directory suffix="RoboFile.php">../modules/custom/**</directory>
+        <file>RoboFile.php</file>
       </exclude>
     </whitelist>
   </filter>

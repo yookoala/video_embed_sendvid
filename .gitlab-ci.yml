@@ -138,7 +138,6 @@ Build:
     # Ensure we have Phpunit for next tests.
     - robo install:phpunit
     # Add here any custom build step, composer run-script, grunt, webpack, yarn...
-    - composer require 'drupal/video_embed_field:^2.2'
   variables:
     <<: *test_variables
   # [CI_TYPE] When using included Drupal for a module or a theme, the
@@ -187,6 +186,10 @@ Code coverage:
       - $SKIP_TESTS == "1"
       - $SKIP_TEST_CODECOVERAGE == "1"
   script:
+    - rm -Rf vendor
+    - cd ${WEB_ROOT}
+    - composer require 'drupal/video_embed_field:^2.2'
+    - cd ${CI_PROJECT_DIR}
     - robo test:coverage "${PHPUNIT_TESTS}unit,${PHPUNIT_TESTS}kernel"
   after_script:
     - cp -r ${WEB_ROOT}/${REPORT_DIR} ./
