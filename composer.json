@@ -1,0 +1,21 @@
+{
+    "name": "drupal/video_embed_sendvid",
+    "description": "Video Embed Field support for Sendvid video",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Koala Yeung <koalay@gmail.com>",
+            "role": "developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "drupal/video_embed_field": "^2.2"
+    }
+}

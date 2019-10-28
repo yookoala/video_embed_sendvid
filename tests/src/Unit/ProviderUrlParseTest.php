@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\video_embed_facebook\Unit;
+namespace Drupal\Tests\video_embed_sendvid\Unit;
 
 use Drupal\Tests\UnitTestCase;
 use Drupal\video_embed_sendvid\Plugin\video_embed_field\Provider\Sendvid;
@@ -18,7 +18,7 @@ class ProviderUrlParseTest extends UnitTestCase {
    * Test URL parsing works as expected.
    */
   public function testUrlParsing($url, $expected) {
-    $this->assertEquals($expected, Facebook::getIdFromInput($url));
+    $this->assertEquals($expected, Sendvid::getIdFromInput($url));
   }
 
   /**
